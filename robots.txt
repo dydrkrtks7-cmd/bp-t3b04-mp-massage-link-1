@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mapo-body-care.mens-esthe.space/sitemap.xml
-Sitemap: https://mapo-body-care.mens-esthe.space/sitemap-pages.xml
+Sitemap: https://sinchon-shirts-note.fx-torihiki.space/sitemap.xml
+Sitemap: https://sinchon-shirts-note.fx-torihiki.space/sitemap-pages.xml
