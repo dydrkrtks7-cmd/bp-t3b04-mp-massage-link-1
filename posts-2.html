@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · t3b04-mp-massage-link-1</title>
+  <meta name="description" content="t3b04-mp-massage-link-1에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sinchon-shirts-note.fx-torihiki.space/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root {
+ --bg-main: #060608;
+ --bg-card: rgba(18, 18, 24, 0.7);
+ --border-card: rgba(255, 255, 255, 0.05);
+ --primary: #8b5cf6;
+ --primary-glow: rgba(139, 92, 246, 0.15);
+ --accent-gold: #fbbf24;
+ --accent-gold-glow: rgba(251, 191, 36, 0.15);
+ --accent-emerald: #10b981;
+ --accent-emerald-glow: rgba(16, 185, 129, 0.12);
+ --accent-blue: #3b82f6;
+ --accent-blue-glow: rgba(59, 130, 246, 0.12);
+ --text-main: #f4f4f5;
+ --text-muted: #a1a1aa;
+ --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+ --font-display: 'Outfit', sans-serif;
+}
+
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ scroll-behavior: smooth;
+}
+
+body {
+ background-color: var(--bg-main);
+ background-image: 
+ radial-gradient(circle at 5% 15%, rgba(139, 92, 246, 0.12) 0%, transparent 40%),
+ radial-gradient(circle at 95% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 45%),
+ radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.03) 0%, transparent 50%);
+ background-attachment: fixed;
+ color: var(--text-main);
+ font-family: var(--font-family);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ padding-bottom: 80px; /* Sticky call bar compensation */
+}
+
+/* Glassmorphism Header */
+header {
+ background: rgba(6, 6, 8, 0.8);
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ transition: all 0.3s ease;
+}
+
+.nav-container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 16px 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.logo-wrapper {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ text-decoration: none;
+}
+
+.logo-icon {
+ width: 40px;
+ height: 40px;
+ background: linear-gradient(135deg, var(--primary), var(--accent-gold));
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-family: var(--font-display);
+ font-weight: 800;
+ font-size: 1.3rem;
+ color: #000;
+ box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.logo-text {
+ font-family: var(--font-display);
+ font-weight: 800;
+ font-size: 1.4rem;
+ color: #fff;
+ letter-spacing: -0.5px;
+ display: flex;
+ flex-direction: column;
+ line-height: 1.1;
+}
+
+.logo-sub {
+ font-size: 0.7rem;
+ color: var(--accent-gold);
+ letter-spacing: 1.5px;
+ font-weight: 600;
+}
+
+nav {
+ display: flex;
+ gap: 28px;
+ align-items: center;
+}
+
+nav a {
+ color: var(--text-muted);
+ text-decoration: none;
+ font-size: 0.95rem;
+ font-weight: 500;
+ transition: all 0.3s ease;
+ position: relative;
+}
+
+nav a:hover {
+ color: #fff;
+}
+
+nav a.active::after {
+ content: '';
+ position: absolute;
+ bottom: -6px;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: var(--accent-gold);
+ border-radius: 9999px;
+}
+
+.btn-nav-call {
+ background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(251, 191, 36, 0.02));
+ border: 1px solid rgba(251, 191, 36, 0.25);
+ color: var(--accent-gold);
+ padding: 10px 20px;
+ border-radius: 9999px;
+ font-size: 0.9rem;
+ font-weight: 700;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ text-decoration: none;
+}
+
+.btn-nav-call:hover {
+ background: var(--accent-gold);
+ color: #000;
+ box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+ transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 80px 24px 50px 24px;
+ text-align: center;
+ position: relative;
+}
+
+.hero-tag {
+ background: rgba(139, 92, 246, 0.08);
+ border: 1px solid rgba(139, 92, 246, 0.2);
+ color: #c084fc;
+ padding: 6px 18px;
+ border-radius: 9999px;
+ font-size: 0.85rem;
+ font-weight: 600;
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+ margin-bottom: 24px;
+ letter-spacing: 0.5px;
+ font-family: var(--font-display);
+}
+
+.pulse-dot {
+ width: 8px;
+ height: 8px;
+ background-color: var(--accent-emerald);
+ border-radius: 50%;
+ box-shadow: 0 0 10px var(--accent-emerald);
+ animation: pulse-glow 1.5s infinite;
+}
+
+@keyframes pulse-glow {
+ 0% { transform: scale(0.95); opacity: 0.5; }
+ 50% { transform: scale(1.2); opacity: 1; box-shadow: 0 0 15px var(--accent-emerald); }
+ 100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+h1 {
+ font-family: var(--font-display);
+ font-size: 3.8rem;
+ font-weight: 800;
+ line-height: 1.15;
+ margin-bottom: 20px;
+ background: linear-gradient(135deg, #ffffff 30%, #e2e8f0 70%, var(--primary) 100%);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ letter-spacing: -2px;
+}
+
+.hero-subtitle {
+ font-size: 1.25rem;
+ color: var(--text-muted);
+ max-width: 780px;
+ margin: 0 auto 36px auto;
+ font-weight: 400;
+}
+
+.hero-actions {
+ display: flex;
+ gap: 16px;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.btn-primary {
+ background: linear-gradient(135deg, var(--primary), #7c3aed);
+ border: none;
+ color: #fff;
+ padding: 16px 36px;
+ border-radius: 14px;
+ font-weight: 700;
+ font-size: 1.05rem;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ box-shadow: 0 8px 30px rgba(139, 92, 246, 0.4);
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.btn-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 12px 35px rgba(139, 92, 246, 0.6);
+}
+
+.btn-secondary {
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ color: var(--text-main);
+ padding: 16px 36px;
+ border-radius: 14px;
+ font-weight: 600;
+ font-size: 1.05rem;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.btn-secondary:hover {
+ background: rgba(255, 255, 255, 0.08);
+ border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Category Filter System */
+.filter-section {
+ max-width: 1200px;
+ margin: 40px auto 20px auto;
+ padding: 0 24px;
+}
+
+.filter-tabs {
+ display: flex;
+ justify-content: center;
+ gap: 12px;
+ flex-wrap: wrap;
+ background: rgba(255, 255, 255, 0.02);
+ border: 1px solid rgba(255, 255, 255, 0.04);
+ padding: 8px;
+ border-radius: 20px;
+ backdrop-filter: blur(10px);
+}
+
+.filter-tab {
+ background: transparent;
+ border: none;
+ color: var(--text-muted);
+ padding: 12px 24px;
+ border-radius: 14px;
+ font-weight: 600;
+ font-size: 0.95rem;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.filter-tab:hover {
+ color: #fff;
+ background: rgba(255, 255, 255, 0.03);
+}
+
+.filter-tab.active {
+ color: #000;
+ font-weight: 700;
+}
+
+.filter-tab[data-target="all"].active { background: #fff; }
+.filter-tab[data-target="wellness"].active { background: linear-gradient(135deg, #a78bfa, #c084fc); }
+.filter-tab[data-target="entertainment"].active { background: linear-gradient(135deg, #f472b6, #fb7185); }
+.filter-tab[data-target="franchise"].active { background: linear-gradient(135deg, #34d399, #059669); }
+.filter-tab[data-target="partner"].active { background: linear-gradient(135deg, #60a5fa, #3b82f6); }
+
+/* Directory Grid */
+.directory-section {
+ max-width: 1200px;
+ margin: 0 auto 60px auto;
+ padding: 0 24px;
+}
+
+.directory-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ gap: 28px;
+ margin-top: 30px;
+}
+
+.directory-card {
+ background: var(--bg-card);
+ border: 1px solid var(--border-card);
+ border-radius: 24px;
+ padding: 32px;
+ position: relative;
+ transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
+.directory-card::before {
+ content: '';
+ position: absolute;
+ top: 0; left: 0;
+ width: 100%; height: 4px;
+ transition: all 0.3s ease;
+}
+
+/* Category Accent Borders & Glows */
+.directory-card[data-category="wellness"]::before { background: linear-gradient(90deg, #8b5cf6, #c084fc); }
+.directory-card[data-category="wellness"]:hover { border-color: rgba(139, 92, 246, 0.3); box-shadow: 0 20px 40px rgba(139, 92, 246, 0.08); }
+
+.directory-card[data-category="entertainment"]::before { background: linear-gradient(90deg, #ec4899, #f43f5e); }
+.directory-card[data-category="entertainment"]:hover { border-color: rgba(236, 72, 153, 0.3); box-shadow: 0 20px 40px rgba(236, 72, 153, 0.08); }
+
+.directory-card[data-category="franchise"]::before { background: linear-gradient(90deg, #10b981, #059669); }
+.directory-card[data-category="franchise"]:hover { border-color: rgba(16, 185, 129, 0.3); box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08); }
+
+.directory-card[data-category="partner"]::before { background: linear-gradient(90deg, #3b82f6, #1d4ed8); }
+.directory-card[data-category="partner"]:hover { border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08); }
+
+.directory-card:hover {
+ transform: translateY(-5px);
+}
+
+.dir-meta {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+.dir-badge {
+ padding: 6px 14px;
+ border-radius: 8px;
+ font-size: 0.75rem;
+ font-weight: 700;
+ letter-spacing: 0.5px;
+ text-transform: uppercase;
+}
+
+.directory-card[data-category="wellness"] .dir-badge { background: rgba(139, 92, 246, 0.1); color: #c084fc; }
+.directory-card[data-category="entertainment"] .dir-badge { background: rgba(236, 72, 153, 0.1); color: #f472b6; }
+.directory-card[data-category="franchise"] .dir-badge { background: rgba(16, 185, 129, 0.1); color: #34d399; }
+.directory-card[data-category="partner"] .dir-badge { background: rgba(59, 130, 246, 0.1); color: #60a5fa; }
+
+.dir-distance {
+ font-size: 0.85rem;
+ color: var(--text-muted);
+ display: inline-flex;
+ align-items: center;
+ gap: 4px;
+}
+
+.dir-content {
+ margin-bottom: 24px;
+}
+
+.dir-title {
+ font-family: var(--font-display);
+ font-size: 1.5rem;
+ font-weight: 800;
+ color: #fff;
+ margin-bottom: 12px;
+ letter-spacing: -0.5px;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+}
+
+.dir-rating {
+ color: var(--accent-gold);
+ font-size: 0.85rem;
+ font-weight: 700;
+ display: inline-flex;
+ align-items: center;
+ gap: 3px;
+}
+
+.dir-text {
+ font-size: 0.95rem;
+ color: var(--text-muted);
+ line-height: 1.6;
+ margin-bottom: 20px;
+}
+
+.dir-tags {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 8px;
+}
+
+.dir-tag {
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid rgba(255, 255, 255, 0.05);
+ color: var(--text-muted);
+ padding: 4px 10px;
+ border-radius: 6px;
+ font-size: 0.78rem;
+ transition: all 0.2s ease;
+}
+
+.dir-tag:hover {
+ background: rgba(255, 255, 255, 0.07);
+ color: #fff;
+}
+
+.dir-action {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-top: 1px solid rgba(255, 255, 255, 0.05);
+ padding-top: 20px;
+ margin-top: auto;
+}
+
+.dir-price {
+ display: flex;
+ flex-direction: column;
+}
+
+.dir-price-label {
+ font-size: 0.75rem;
+ color: var(--text-muted);
+ text-transform: uppercase;
+}
+
+.dir-price-val {
+ font-size: 1.25rem;
+ font-weight: 800;
+ color: #fff;
+ font-family: var(--font-display);
+}
+
+.dir-btn {
+ border-radius: 10px;
+ font-size: 0.88rem;
+ font-weight: 700;
+ text-decoration: none;
+ padding: 10px 22px;
+ transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ display: inline-flex;
+ align-items: center;
+ gap: 6px;
+}
+
+.directory-card[data-category="wellness"] .dir-btn { background: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); color: #c084fc; }
+.directory-card[data-category="wellness"] .dir-btn:hover { background: var(--primary); color: #fff; box-shadow: 0 0 15px rgba(139, 92, 246, 0.3); }
+
+.directory-card[data-category="entertainment"] .dir-btn { background: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2); color: #f472b6; }
+.directory-card[data-category="entertainment"] .dir-btn:hover { background: #ec4899; color: #fff; box-shadow: 0 0 15px rgba(236, 72, 153, 0.3); }
+
+.directory-card[data-category="franchise"] .dir-btn { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #34d399; }
+.directory-card[data-category="franchise"] .dir-btn:hover { background: var(--accent-emerald); color: #fff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+
+.directory-card[data-category="partner"] .dir-btn { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa; }
+.directory-card[data-category="partner"] .dir-btn:hover { background: var(--accent-blue); color: #fff; box-shadow: 0 0 15px rgba(59, 130, 246, 0.3); }
+
+/* Interactive Wellness Matching Wizard */
+.wizard-section {
+ max-width: 1000px;
+ margin: 60px auto;
+ padding: 0 24px;
+}
+
+.wizard-card {
+ background: linear-gradient(135deg, rgba(20, 20, 28, 0.8), rgba(10, 10, 15, 0.9));
+ border: 1px solid rgba(139, 92, 246, 0.15);
+ border-radius: 32px;
+ padding: 50px 40px;
+ box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+ position: relative;
+ overflow: hidden;
+}
+
+.wizard-card::after {
+ content: '';
+ position: absolute;
+ top: -100px; right: -100px;
+ width: 300px; height: 300px;
+ background: var(--primary-glow);
+ filter: blur(100px);
+ border-radius: 50%;
+ pointer-events: none;
+}
+
+.wizard-header {
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+.wizard-title {
+ font-family: var(--font-display);
+ font-size: 2.2rem;
+ font-weight: 800;
+ color: #fff;
+ letter-spacing: -0.5px;
+}
+
+.wizard-desc {
+ color: var(--text-muted);
+ margin-top: 8px;
+}
+
+.wizard-form {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 24px;
+ margin-bottom: 36px;
+}
+
+.form-group {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+
+.form-label {
+ font-size: 0.9rem;
+ font-weight: 700;
+ color: #fff;
+ letter-spacing: 0.5px;
+ text-transform: uppercase;
+}
+
+.form-select {
+ background: rgba(255, 255, 255, 0.02);
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ color: var(--text-main);
+ padding: 16px;
+ border-radius: 14px;
+ font-size: 0.95rem;
+ font-weight: 500;
+ outline: none;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ appearance: none;
+ -webkit-appearance: none;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23a1a1aa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-position: right 16px center;
+ background-size: 16px;
+}
+
+.form-select:focus {
+ border-color: var(--primary);
+ background-color: rgba(255, 255, 255, 0.05);
+ box-shadow: 0 0 15px rgba(139, 92, 246, 0.25);
+}
+
+.btn-wizard-submit {
+ width: 100%;
+ background: linear-gradient(135deg, var(--accent-gold), #d97706);
+ border: none;
+ color: #000;
+ padding: 18px;
+ border-radius: 14px;
+ font-weight: 800;
+ font-size: 1.1rem;
+ cursor: pointer;
+ transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+}
+
+.btn-wizard-submit:hover {
+ transform: scale(1.01);
+ box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+}
+
+/* Matching Result Slot */
+.wizard-result {
+ margin-top: 30px;
+ padding: 30px;
+ border-radius: 20px;
+ border: 1px dashed rgba(255, 255, 255, 0.1);
+ background: rgba(255, 255, 255, 0.01);
+ display: none;
+ animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-up {
+ from { transform: translateY(20px); opacity: 0; }
+ to { transform: translateY(0); opacity: 1; }
+}
+
+/* Premium Map Section */
+.map-section {
+ max-width: 1200px;
+ margin: 80px auto;
+ padding: 0 24px;
+}
+
+.map-wrapper {
+ background: var(--bg-card);
+ border: 1px solid var(--border-card);
+ border-radius: 32px;
+ padding: 40px;
+ display: grid;
+ grid-template-columns: 1fr 1.2fr;
+ gap: 40px;
+ align-items: center;
+ backdrop-filter: blur(20px);
+}
+
+@media(max-width: 992px) {
+ .map-wrapper { grid-template-columns: 1fr; }
+}
+
+.map-info {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.map-title {
+ font-family: var(--font-display);
+ font-size: 2.2rem;
+ font-weight: 800;
+ color: #fff;
+ letter-spacing: -0.5px;
+}
+
+.map-desc {
+ color: var(--text-muted);
+ font-size: 1.05rem;
+}
+
+.map-stations {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 16px;
+}
+
+.station-node {
+ background: rgba(255, 255, 255, 0.02);
+ border: 1px solid rgba(255, 255, 255, 0.04);
+ padding: 16px;
+ border-radius: 16px;
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ transition: all 0.3s ease;
+}
+
+.station-node:hover {
+ background: rgba(255, 255, 255, 0.06);
+ border-color: rgba(255, 255, 255, 0.1);
+ transform: translateX(4px);
+}
+
+.station-dot {
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+}
+
+.station-name {
+ font-weight: 700;
+ color: #fff;
+}
+
+.station-sub {
+ font-size: 0.75rem;
+ color: var(--text-muted);
+}
+
+/* SVG Vector Map Canvas */
+.map-canvas-container {
+ width: 100%;
+ height: 380px;
+ border-radius: 20px;
+ background: rgba(0, 0, 0, 0.3);
+ border: 1px solid rgba(255, 255, 255, 0.04);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ overflow: hidden;
+}
+
+.map-svg {
+ width: 90%;
+ height: 90%;
+ transition: all 0.5s ease;
+}
+
+.map-hotspot {
+ cursor: pointer;
+ transition: all 0.3s ease;
+}
+
+.map-hotspot:hover circle {
+ fill: var(--accent-gold);
+ r: 12;
+ filter: drop-shadow(0 0 10px var(--accent-gold));
+}
+
+.map-hotspot:hover text {
+ fill: #fff;
+ font-weight: 800;
+ font-size: 14px;
+}
+
+/* UGC Feedback Testimonials */
+.testimonials-section {
+ max-width: 1200px;
+ margin: 80px auto;
+ padding: 0 24px;
+}
+
+.reviews-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 28px;
+ margin-top: 40px;
+}
+
+.review-card {
+ background: var(--bg-card);
+ border: 1px solid var(--border-card);
+ border-radius: 24px;
+ padding: 32px;
+ position: relative;
+ transition: all 0.3s ease;
+}
+
+.review-card:hover {
+ border-color: rgba(255, 255, 255, 0.08);
+ transform: translateY(-2px);
+}
+
+.review-author {
+ display: flex;
+ align-items: center;
+ gap: 14px;
+ margin-bottom: 20px;
+}
+
+.author-avatar {
+ width: 52px;
+ height: 52px;
+ background: linear-gradient(135deg, var(--primary), var(--accent-blue));
+ border-radius: 14px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 800;
+ font-size: 1.25rem;
+ color: #fff;
+}
+
+.author-info {
+ display: flex;
+ flex-direction: column;
+}
+
+.author-name-wrapper {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+}
+
+.author-name {
+ font-weight: 700;
+ color: #fff;
+ font-size: 1rem;
+}
+
+.verified-badge {
+ background: rgba(16, 185, 129, 0.1);
+ color: var(--accent-emerald);
+ border: 1px solid rgba(16, 185, 129, 0.2);
+ padding: 2px 6px;
+ border-radius: 4px;
+ font-size: 0.65rem;
+ font-weight: 700;
+}
+
+.review-date {
+ font-size: 0.8rem;
+ color: var(--text-muted);
+ margin-top: 2px;
+}
+
+.review-stars {
+ color: var(--accent-gold);
+ font-size: 0.95rem;
+ letter-spacing: 1px;
+ margin-bottom: 14px;
+ display: flex;
+ align-items: center;
+ gap: 2px;
+}
+
+.review-text {
+ font-size: 0.98rem;
+ color: var(--text-muted);
+ line-height: 1.65;
+}
+
+/* Premium FAQ Accordion */
+.faq-section {
+ max-width: 850px;
+ margin: 80px auto;
+ padding: 0 24px;
+}
+
+.faq-list {
+ margin-top: 40px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+}
+
+.faq-item {
+ background: var(--bg-card);
+ border: 1px solid var(--border-card);
+ border-radius: 20px;
+ overflow: hidden;
+ transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+ border-color: rgba(255, 255, 255, 0.08);
+}
+
+.faq-question {
+ padding: 24px;
+ font-weight: 700;
+ font-size: 1.1rem;
+ color: #fff;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ user-select: none;
+}
+
+.faq-icon-box {
+ width: 32px;
+ height: 32px;
+ background: rgba(255, 255, 255, 0.03);
+ border: 1px solid rgba(255, 255, 255, 0.06);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 0.8rem;
+ transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-icon-box {
+ background: var(--primary);
+ color: #fff;
+ border-color: var(--primary);
+ transform: rotate(45deg);
+}
+
+.faq-answer {
+ padding: 0 24px 24px 24px;
+ color: var(--text-muted);
+ font-size: 0.98rem;
+ line-height: 1.7;
+ border-top: 1px solid rgba(255, 255, 255, 0.02);
+ display: none;
+ animation: slide-down 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slide-down {
+ from { opacity: 0; transform: translateY(-10px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+
+/* Call-to-action Section */
+.contact-section {
+ max-width: 950px;
+ margin: 100px auto 40px auto;
+ padding: 70px 40px;
+ background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(251, 191, 36, 0.03) 100%);
+ border: 1px solid rgba(139, 92, 246, 0.15);
+ border-radius: 36px;
+ text-align: center;
+ backdrop-filter: blur(20px);
+ position: relative;
+ overflow: hidden;
+}
+
+.contact-section::before {
+ content: '';
+ position: absolute;
+ bottom: -50px; left: -50px;
+ width: 200px; height: 200px;
+ background: var(--accent-gold-glow);
+ filter: blur(80px);
+ border-radius: 50%;
+}
+
+.contact-title {
+ font-family: var(--font-display);
+ font-size: 2.5rem;
+ font-weight: 800;
+ color: #fff;
+ margin-bottom: 16px;
+}
+
+.contact-desc {
+ color: var(--text-muted);
+ max-width: 600px;
+ margin: 0 auto 36px auto;
+ font-size: 1.05rem;
+}
+
+.phone-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 16px;
+ font-size: 2.8rem;
+ font-weight: 800;
+ color: var(--accent-gold);
+ text-decoration: none;
+ font-family: var(--font-display);
+ transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ margin-bottom: 36px;
+ letter-spacing: -1px;
+}
+
+.phone-link:hover {
+ transform: scale(1.02);
+ text-shadow: 0 0 25px rgba(251, 191, 36, 0.5);
+}
+
+.contact-map-links {
+ display: flex;
+ justify-content: center;
+ gap: 16px;
+ flex-wrap: wrap;
+}
+
+.map-btn {
+ background: rgba(255, 255, 255, 0.02);
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ color: var(--text-main);
+ padding: 12px 28px;
+ border-radius: 10px;
+ font-size: 0.95rem;
+ font-weight: 600;
+ text-decoration: none;
+ transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+ background: rgba(255, 255, 255, 0.08);
+ border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Footer styling */
+footer {
+ background: #030304;
+ border-top: 1px solid rgba(255, 255, 255, 0.02);
+ padding: 70px 24px;
+ text-align: center;
+}
+
+.footer-logo {
+ font-family: var(--font-display);
+ font-weight: 800;
+ font-size: 1.8rem;
+ color: #fff;
+ margin-bottom: 12px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+}
+
+.footer-logo span {
+ color: var(--accent-gold);
+}
+
+.footer-desc {
+ color: var(--text-muted);
+ max-width: 600px;
+ margin: 0 auto 30px auto;
+ font-size: 0.9rem;
+}
+
+.footer-links {
+ display: flex;
+ justify-content: center;
+ gap: 32px;
+ margin-bottom: 30px;
+ flex-wrap: wrap;
+}
+
+.footer-links a {
+ color: var(--text-muted);
+ text-decoration: none;
+ font-size: 0.9rem;
+ font-weight: 500;
+ transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+ color: #fff;
+}
+
+.footer-copy {
+ color: #3f3f46;
+ font-size: 0.8rem;
+ border-top: 1px solid rgba(255, 255, 255, 0.02);
+ padding-top: 30px;
+ max-width: 1000px;
+ margin: 0 auto;
+}
+
+/* Sticky Bottom Call Navigation for Mobile Conversion */
+.sticky-call-bar {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ background: rgba(6, 6, 8, 0.85);
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ border-top: 1px solid rgba(255, 255, 255, 0.06);
+ padding: 12px 24px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 999;
+}
+
+.sticky-info {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+}
+
+.sticky-pulse {
+ width: 10px;
+ height: 10px;
+ background-color: var(--accent-gold);
+ border-radius: 50%;
+ animation: pulse-glow 1.2s infinite;
+}
+
+.sticky-title {
+ font-size: 0.95rem;
+ font-weight: 700;
+ color: #fff;
+}
+
+.sticky-sub {
+ font-size: 0.75rem;
+ color: var(--text-muted);
+}
+
+.btn-sticky-call {
+ background: linear-gradient(135deg, var(--accent-gold), #d97706);
+ color: #000;
+ border: none;
+ padding: 12px 24px;
+ border-radius: 12px;
+ font-weight: 800;
+ font-size: 0.95rem;
+ text-decoration: none;
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+ transition: all 0.3s ease;
+}
+
+.btn-sticky-call:hover {
+ transform: scale(1.02);
+ box-shadow: 0 0 25px rgba(251, 191, 36, 0.5);
+}
+
+@media(max-width: 768px) {
+ h1 { font-size: 2.6rem; }
+ .hero-section { padding-top: 50px; }
+ .nav-container { padding: 12px 16px; }
+ nav { display: none; }
+ .directory-grid { grid-template-columns: 1fr; }
+ .faq-question { padding: 18px; font-size: 1rem; }
+ .contact-section { padding: 40px 20px; }
+ .phone-link { font-size: 1.9rem; }
+ .wizard-card { padding: 30px 20px; }
+}
+</style>
+  <meta property="og:title" content="글 목록 (2/2) · t3b04-mp-massage-link-1">
+  <meta property="og:description" content="t3b04-mp-massage-link-1에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sinchon-shirts-note.fx-torihiki.space/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="nav-container">
+ <a href="/" class="logo-wrapper">
+ <div class="logo-icon">LH</div>
+ <div class="logo-text">
+ LINK-HUB
+ <span class="logo-sub">MAPO PORTAL</span>
+ </div>
+ </a>
+ <nav>
+ <a href="#directory" class="active">비즈니스 디렉토리</a>
+ <a href="#wizard">맞춤 추천 매칭</a>
+ <a href="#map">지역 맵 안내</a>
+ <a href="#faq">자주 묻는 질문</a>
+ </nav>
+ 
+ </div>
+</header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 38개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0021.html">마포 마사지 추천 정보와 연계된 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">일상의 피로를 풀기 위해 마포 마사지 추천 리스트를 찾는 분들이라면, 이후 이어지는 저녁 모임 장소 선정에도 신중을 기할 것입니다. 단체로 방문하는 가라오케는 인원 수용 능력과 음향 시설의 상태를 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0022.html">마포 마사지 추천 활용한 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">마포 마사지 추천 장소를 방문한 뒤 이어지는 회식은 업무의 연장선이기도 하며 동시에 중요한 휴식 시간입니다. 이때 대형 룸 노래방을 선택할 때는 가격 합리성과 시설의 질이라는 두 가지 요소를 놓고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0023.html">마포 마사지 추천 이후 방문하는 마포/합정 인디 소셜 라운지 가이드</a>
+        <p class="post-item__summary">마포 마사지 추천 코스를 즐긴 후 프라이빗한 파티를 기획할 때 많은 사람이 실패를 경험하곤 합니다. 가장 흔한 실패 지점은 인디 소셜 라운지의 특성을 고려하지 않고 일반적인 파티룸과 동일하게 접근하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0024.html">마포 마사지 추천 정보와 함께 알아보는 셔츠룸 예약 확인 항목</a>
+        <p class="post-item__summary">마포 마사지 추천 코스로 긴장을 완화한 뒤 이어질 저녁 시간의 선택지로 셔츠룸을 고려하는 분들이 늘고 있습니다. 예약 시 가장 중요한 점은 방문지의 정확한 위치와 접근성을 최우선으로 검토하는 것입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0025.html">마포 마사지 추천으로 알아보는 홍대 로컬 럭셔리 밤문화 가이드 및 주의사항</a>
+        <p class="post-item__summary">처음 마포 지역을 방문한 여행객이 피로를 풀기 위해 마포 마사지 추천 업체를 찾다가 우연히 심야 시간의 활기찬 분위기에 매료되는 경우가 많습니다. 낮에는 정적인 도시지만 밤이 되면 홍대 일대는 색다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0026.html">마포 마사지 추천 정보를 활용한 합정 셔츠룸 단골들이 뽑은 핫플 매거진</a>
+        <p class="post-item__summary">사람들은 흔히 마포 마사지 추천 업체를 찾는 것과 셔츠룸을 방문하는 활동이 전혀 별개의 영역이라고 오해하곤 합니다. 하지만 실제로 많은 이용객은 신체적 피로를 회복한 뒤 여유로운 저녁 시간을 보내기</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0027.html">마포 마사지 추천 및 마포 유흥 투명 정찰제 가격 정보 디렉토리의 필요성</a>
+        <p class="post-item__summary">마포 마사지 추천 서비스를 검색할 때 가장 중요한 요소는 위생, 친절도, 그리고 투명한 비용 체계입니다. 소비자 입장에서는 사전에 확정된 가격을 아는 것이 불필요한 마찰을 줄이는 가장 좋은 방법입니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0028.html">마포 마사지 추천과 연계된 셔츠룸 사이트 활용법 및 업체 비교 기준</a>
+        <p class="post-item__summary">혹시 여러분은 마포 마사지 추천 업체를 찾다가 셔츠룸과 같은 심야 유흥 문화를 접하고 고민에 빠진 적이 있으신가요. 처음 접하는 사람들에게는 이 세계가 복잡하고 어렵게 느껴질 수 있지만, 기준만 확</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0029.html">마포 마사지 추천 정보 확인 후 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">건전한 여가 생활을 즐기기 위해 마포 마사지 추천 정보를 검색하는 소비자가 늘고 있습니다. 하지만 유흥 업종을 선택할 때는 예상치 못한 추가 비용 발생으로 어려움을 겪는 경우가 적지 않습니다. 특히</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0030.html">마포 마사지 추천 업체 비교와 마포 코인노래방 방음 시설 비교 가이드</a>
+        <p class="post-item__summary">마포 지역에서 쾌적한 휴식 공간을 찾으시는 분들은 마포 마사지 추천 리스트를 자주 검토하곤 합니다. 이와 마찬가지로 취미 활동을 위한 코인노래방을 고를 때도 시설의 질적 차이를 세심하게 따져봐야 합</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0031.html">마포 마사지 추천 목록과 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드</a>
+        <p class="post-item__summary">요즘 온라인에서 마포 마사지 추천 정보를 검색하다 보면 광고성 게시물에 노출되기 쉽습니다. 이는 셔츠룸과 같은 유흥 문화 정보에서도 동일하게 나타나는 현상입니다. 많은 이들이 실패하는 지점은 바로 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0032.html">마포 마사지 추천 찾을 때 구글 신뢰 지수 모발이식 솔루션 분석 방법</a>
+        <p class="post-item__summary">일상에서 마포 마사지 추천 업체를 찾거나 의학적 솔루션을 찾을 때, 검색 엔진의 신뢰도는 중요한 판단 기준이 됩니다. 특히 전문적인 시술을 결정할 때는 정보의 정확성이 곧 안전으로 직결됩니다. 이때</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">마포 마사지 추천 정보 안내</a>
+        <p class="post-item__summary">마포 지역에서 마사지 서비스를 고려 중이라면, 전문적인 정보를 수집하여 신중하게 결정하는 과정이 필요합니다. 다양한 매뉴와 컨디션 관리 목적에 맞는 서비스를 선택할 때는 해당 지역의 전문적인 정보 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">마포 마사지 추천 정보 안내</a>
+        <p class="post-item__summary">마포 지역에서 마사지를 고려 중이신 분들을 위해 관련 정보를 안내해 드립니다. 마사지는 신체의 피로를 해소하고 근육의 긴장을 완화하는 데 도움이 되는 대표적인 힐링 방법입니다. 특히 마포는 교통 접</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">마포 마사지 추천 정보 안내</a>
+        <p class="post-item__summary">마포 지역에서 마사지를 이용할 때 가장 중요한 것은 합법적이고 안전한 시설을 선택하는 것입니다. 많은 사람들이 스트레스 해소를 위해 마사지를 찾지만, 시장에는 다양한 유형의 업체가 존재하므로 신중한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">마포 마사지 추천</a>
+        <p class="post-item__summary">마포 지역에서 마사지 상담을 찾아보시는 분들을 위해, 업체를 선택할 때 참고할 만한 기준을 정리해 보았습니다. 먼저 방문 전 확인이 필요한 것은 허가를 받은 정상 영업소인지 여부입니다. 합법적으로 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">마포 마사지 추천 정보</a>
+        <p class="post-item__summary">마포 지역에서 휴식과 이완을 목적으로 하는 마사지 서비스를 알아보는 분들은 점차 늘어나고 있습니다. 올바른 선택을 위해서는 지역의 다양한 시설과 서비스를 비교하며 신중하게 고려하는 과정이 필요합니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001-1k6dqxn.html">마포 마사지 추천 솔직 후기</a>
+        <p class="post-item__summary">마포 지역은 유동 인구가 많고 직장인이 밀집해 있어 마사지 샵이 매우 다양하게 분포하고 있습니다. 단순히 가까운 곳을 방문하기보다는 자신의 컨디션과 목적에 맞는 관리 방식을 찾는 것이 중요합니다. </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
